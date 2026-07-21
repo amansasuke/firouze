@@ -22,42 +22,48 @@
     <p class="section-label">Our Story</p>
     <h2 class="section-title">A Heritage Carved in Time</h2>
 
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-icon"><span>&#128142;</span></div>
-        <span class="tl-dot"></span>
-        <h3>The Gem of Neyshabur</h3>
-        <p>A symbol of protection, luck &amp; calm.</p>
+    <div class="timeline-v">
+      <div class="tlv-item">
+        <div class="tlv-marker"><img class="tlv-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Gem.png' ) ); ?>" alt="The Gem of Neyshabur"></div>
+        <div class="tlv-body">
+          <h3>The Gem of Neyshabur</h3>
+          <p>A symbol of protection, luck &amp; calm.</p>
+        </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-icon"><span>&#127963;</span></div>
-        <span class="tl-dot"></span>
-        <h3>Ancient Persia</h3>
-        <p>Treasured by poets, kings &amp; travelers.</p>
+      <div class="tlv-item">
+        <div class="tlv-marker"><img class="tlv-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/ancient.png' ) ); ?>" alt="Ancient Persia"></div>
+        <div class="tlv-body">
+          <h3>Ancient Persia</h3>
+          <p>Treasured by poets, kings &amp; travelers.</p>
+        </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-icon"><span>&#9968;</span></div>
-        <span class="tl-dot"></span>
-        <h3>Neyshabur Mines</h3>
-        <p>Where the legendary Firouze stone was born.</p>
+      <div class="tlv-item">
+        <div class="tlv-marker"><img class="tlv-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/mines.png' ) ); ?>" alt="Neyshabur Mines"></div>
+        <div class="tlv-body">
+          <h3>Neyshabur Mines</h3>
+          <p>Where the legendary Firouze stone was born.</p>
+        </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-icon"><span>&#128042;</span></div>
-        <span class="tl-dot"></span>
-        <h3>Persian Trade Routes</h3>
-        <p>Shared across lands, a sign of heritage.</p>
+      <div class="tlv-item">
+        <div class="tlv-marker"><img class="tlv-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/routes.png' ) ); ?>" alt="Persian Trade Routes"></div>
+        <div class="tlv-body">
+          <h3>Persian Trade Routes</h3>
+          <p>Shared across lands, a sign of heritage.</p>
+        </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-icon"><span>&#127811;</span></div>
-        <span class="tl-dot"></span>
-        <h3>Lahijan Tea Gardens</h3>
-        <p>Where mist meets the hills and tea thrives.</p>
+      <div class="tlv-item">
+        <div class="tlv-marker"><img class="tlv-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/gardens.png' ) ); ?>" alt="Lahijan Tea Gardens"></div>
+        <div class="tlv-body">
+          <h3>Lahijan Tea Gardens</h3>
+          <p>Where mist meets the hills and tea thrives.</p>
+        </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-icon"><span>&#129689;</span></div>
-        <span class="tl-dot"></span>
-        <h3>Firouze Tea</h3>
-        <p>Crafted with passion. Shared with the world.</p>
+      <div class="tlv-item">
+        <div class="tlv-marker"><img class="tlv-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/firouze-tea.png' ) ); ?>" alt="Firouze Tea"></div>
+        <div class="tlv-body">
+          <h3>Firouze Tea</h3>
+          <p>Crafted with passion. Shared with the world.</p>
+        </div>
       </div>
     </div>
 
@@ -85,27 +91,27 @@
 
     <div class="tea-cards">
       <a class="tea-card tea-cinnamon" href="<?php echo esc_url( home_url( '/cinnamon-tea/' ) ); ?>">
-        <img class="tea-jar" src="<?php echo esc_url( get_template_directory_uri() . '/assets/jar-cinnamon.png' ); ?>" alt="Cinnamon Tea jar">
+        <img class="tea-jar" src="<?php echo esc_url( content_url( '/uploads/2026/07/Cinnamon-tea.png' ) ); ?>" alt="Cinnamon Tea jar">
         <h3>Cinnamon Tea</h3>
         <p>Comforting and naturally spiced premium Persian cinnamon for a warm, soothing infusion.</p>
       </a>
       <a class="tea-card tea-black" href="<?php echo esc_url( home_url( '/black-tea/' ) ); ?>">
-        <img class="tea-jar" src="<?php echo esc_url( get_template_directory_uri() . '/assets/jar-cinnamon.png' ); ?>" alt="Black Tea jar">
+        <img class="tea-jar" src="<?php echo esc_url( content_url( '/uploads/2026/07/black-tea.png' ) ); ?>" alt="Black Tea jar">
         <h3>Black Tea</h3>
         <p>Bold, rich and aromatic black tea crafted from premium Persian leaves.</p>
       </a>
       <a class="tea-card tea-cardamom" href="<?php echo esc_url( home_url( '/cardamom-tea/' ) ); ?>">
-        <img class="tea-jar" src="<?php echo esc_url( get_template_directory_uri() . '/assets/jar-cinnamon.png' ); ?>" alt="Cardamom Tea jar">
+        <img class="tea-jar" src="<?php echo esc_url( content_url( '/uploads/2026/07/cardamom-tea.png' ) ); ?>" alt="Cardamom Tea jar">
         <h3>Cardamom Tea</h3>
         <p>Cool, aromatic and refreshing, blended with premium Persian cardamom for a smooth, uplifting cup.</p>
       </a>
       <a class="tea-card tea-saffron" href="<?php echo esc_url( home_url( '/saffron-tea/' ) ); ?>">
-        <img class="tea-jar" src="<?php echo esc_url( get_template_directory_uri() . '/assets/jar-cinnamon.png' ); ?>" alt="Saffron Tea jar">
+        <img class="tea-jar" src="<?php echo esc_url( content_url( '/uploads/2026/07/saffron-tea.png' ) ); ?>" alt="Saffron Tea jar">
         <h3>Saffron Tea</h3>
         <p>Golden, fragrant and delicately infused with premium Persian saffron for a luxurious tea experience.</p>
       </a>
       <a class="tea-card tea-green" href="<?php echo esc_url( home_url( '/green-tea/' ) ); ?>">
-        <img class="tea-jar" src="<?php echo esc_url( get_template_directory_uri() . '/assets/jar-cinnamon.png' ); ?>" alt="Green Tea jar">
+        <img class="tea-jar" src="<?php echo esc_url( content_url( '/uploads/2026/07/Green-tea.png' ) ); ?>" alt="Green Tea jar">
         <h3>Green Tea</h3>
         <p>Fresh, light and revitalizing tea crafted from carefully selected Persian tea leaves.</p>
       </a>
@@ -126,27 +132,27 @@
       </div>
       <div class="craft-steps">
         <div class="craft-step">
-          <span class="craft-icon">&#127811;</span>
+          <img class="craft-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Handpicked-Leaves.png' ) ); ?>" alt="Handpicked Leaves">
           <p>Handpicked<br>Leaves</p>
         </div>
         <div class="craft-step">
-          <span class="craft-icon">&#9749;</span>
+          <img class="craft-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Careful-Selection.png' ) ); ?>" alt="Careful Selection">
           <p>Careful<br>Selection</p>
         </div>
         <div class="craft-step">
-          <span class="craft-icon">&#9832;</span>
+          <img class="craft-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Traditional-Drying.png' ) ); ?>" alt="Traditional Drying">
           <p>Traditional<br>Drying</p>
         </div>
         <div class="craft-step">
-          <span class="craft-icon">&#129750;</span>
+          <img class="craft-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Expert-Blending.png' ) ); ?>" alt="Expert Blending">
           <p>Expert<br>Blending</p>
         </div>
         <div class="craft-step">
-          <span class="craft-icon">&#129689;</span>
+          <img class="craft-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Premium-Packaging.png' ) ); ?>" alt="Premium Packaging">
           <p>Premium<br>Packaging</p>
         </div>
         <div class="craft-step">
-          <span class="craft-icon">&#127760;</span>
+          <img class="craft-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Global-Distribution.png' ) ); ?>" alt="Global Distribution">
           <p>Global<br>Distribution</p>
         </div>
       </div>
@@ -163,27 +169,27 @@
 
     <div class="partner-grid">
       <div class="partner-item">
-        <span class="partner-icon">&#127978;</span>
+        <img class="partner-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Retailer.png' ) ); ?>" alt="Retailers">
         <p>Retailers</p>
       </div>
       <div class="partner-item">
-        <span class="partner-icon">&#128674;</span>
+        <img class="partner-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Importer.png' ) ); ?>" alt="Importers">
         <p>Importers</p>
       </div>
       <div class="partner-item">
-        <span class="partner-icon">&#128722;</span>
+        <img class="partner-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Supermarket.png' ) ); ?>" alt="Supermarkets">
         <p>Supermarkets</p>
       </div>
       <div class="partner-item">
-        <span class="partner-icon">&#127963;</span>
+        <img class="partner-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Hotels.png' ) ); ?>" alt="Hotels">
         <p>Hotels</p>
       </div>
       <div class="partner-item">
-        <span class="partner-icon">&#9749;</span>
+        <img class="partner-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Cafes.png' ) ); ?>" alt="Cafes">
         <p>Cafes</p>
       </div>
       <div class="partner-item">
-        <span class="partner-icon">&#128666;</span>
+        <img class="partner-icon" src="<?php echo esc_url( content_url( '/uploads/2026/07/Distributors.png' ) ); ?>" alt="Distributors">
         <p>Distributors</p>
       </div>
     </div>

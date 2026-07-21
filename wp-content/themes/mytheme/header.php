@@ -19,7 +19,10 @@
         </a>
       <?php endif; ?>
     </div>
-    <nav class="main-nav">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
       <?php
       wp_nav_menu( array(
         'theme_location' => 'primary',

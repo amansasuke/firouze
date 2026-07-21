@@ -18,6 +18,14 @@ function mytheme_styles() {
     null
   );
   wp_enqueue_style( 'mytheme-style', get_stylesheet_uri(), array( 'mytheme-fonts' ), filemtime( get_stylesheet_directory() . '/style.css' ) );
+
+  wp_enqueue_script(
+    'mytheme-main',
+    get_template_directory_uri() . '/assets/js/main.js',
+    array(),
+    filemtime( get_stylesheet_directory() . '/assets/js/main.js' ),
+    true
+  );
 }
 add_action( 'wp_enqueue_scripts', 'mytheme_styles' );
 
