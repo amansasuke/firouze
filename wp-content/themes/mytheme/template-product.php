@@ -4,10 +4,15 @@
  */
 
 $cinnamon_hero = content_url( '/uploads/2026/07/e16c5c54e882ab31d4748a5622994e740e2a720d.png' );
+$cinnamon_cup  = content_url( '/uploads/2026/07/bd5e540933c271213e1da99b277fefd6e1564c05.png' );
+$pavilion_bg   = content_url( '/uploads/2026/07/e623358bab84b181381c659d90af66bcfa58751b-1.png' );
 $green_hero    = content_url( '/uploads/2026/07/890d4ce481755cd0ea51619e32758906c67166c5-1.png' );
 $black_bg      = content_url( '/uploads/2026/07/e623358bab84b181381c659d90af66bcfa58751b-1.png' );
 $black_cutout  = content_url( '/uploads/2026/07/aced5d41ee33a165356be92f2a2d748301926377.png' );
-$black_cup     = content_url( '/uploads/2026/07/ba369650cc7b7486b5c765c848994b6436dcb67c.png' );
+$black_cup     = content_url( '/uploads/2026/07/ba369650cc7b7486b5c765c848994b6436dcb67c-1.png' );
+$black_field   = content_url( '/uploads/2026/07/412cc54f1caf5550d0a852b0e777a16156a1258c.png' );
+$frame_tall    = content_url( '/uploads/2026/07/0e921a899f808ad73137d6eac8aedab5c101cfc3-1.png' );
+$frame_wide    = content_url( '/uploads/2026/07/4531f10802ccb31f0a1e700bc7d2fc189b592139-1.png' );
 $cardamom_hero = content_url( '/uploads/2026/07/cca6d5fdd8cb6011edb07f53934f23ad8d6295a7.png' );
 $cardamom_about = content_url( '/uploads/2026/07/7db8a7ba5081f946a83473636dc6c99677e63c77.png' );
 $cardamom_brew = content_url( '/uploads/2026/07/ff0352052163ac8368e4d8c2379ff51b819b2f6c.png' );
@@ -20,7 +25,10 @@ $products = array(
 		'tagline'           => 'Warm Persian Infusion',
 		'hero_image'        => $cinnamon_hero,
 		'description'       => 'A comforting blend of premium Persian black tea and fragrant cinnamon, carefully crafted to deliver gentle warmth, rich aroma, and a naturally smooth finish in every cup.',
-		'long_description'  => 'Grown in the misty hills of Lahijan and finished with the warm, woody sweetness of cinnamon, this blend has been a fixture of Persian tea houses for generations. Each batch is hand-inspected to ensure only the finest leaves and bark make it into the jar.',
+		'long_description'  => 'Firouze Cinnamon Tea combines the bold character of authentic Persian black tea with the comforting aroma of natural cinnamon. Inspired by centuries of Persian tea traditions, this carefully balanced blend delivers warmth, depth, and elegance in every sip.',
+		'about_bg'          => $pavilion_bg,
+		'card_frame_v'      => $frame_tall,
+		'card_frame_h'      => $frame_wide,
 		'features'          => array(
 			array( 'icon' => '&#127811;', 'label' => '100% Persian Tea Leaves' ),
 			array( 'icon' => '&#10084;', 'label' => 'Natural Cinnamon' ),
@@ -33,13 +41,13 @@ $products = array(
 			array( 'icon' => '&#9749;', 'title' => 'Perfect Anytime', 'text' => 'Ideal for any time of the day to refresh, relax and recharge your body.' ),
 		),
 		'brewing'           => array(
-			array( 'icon' => '&#129348;', 'title' => '1 TSP', 'text' => 'Firouze Cinnamon Tea per cup.' ),
-			array( 'icon' => '&#128167;', 'title' => '90&ndash;95&deg;C Water', 'text' => 'Pour freshly boiled water over the leaves.' ),
-			array( 'icon' => '&#129750;', 'title' => 'Steep 5&ndash;7 Minutes', 'text' => 'Let the aroma develop in a warm teapot.' ),
-			array( 'icon' => '&#9749;', 'title' => 'Strain &amp; Serve', 'text' => 'Enjoy warm, plain or with honey.' ),
+			array( 'icon' => '&#129348;', 'title' => '1 TSP', 'text' => 'FIROUZE Cinnamon Tea Leaves.' ),
+			array( 'icon' => '&#128167;', 'title' => '200ML', 'text' => 'Boiling Water (90&ndash;95&deg;C).' ),
+			array( 'icon' => '&#129750;', 'title' => '3&ndash;5 MINS', 'text' => 'Steep to Perfection.' ),
+			array( 'icon' => '&#9749;', 'title' => 'Strain &amp; Enjoy', 'text' => 'Best Enjoyed Hot.' ),
 		),
-		'brew_photo'        => $cinnamon_hero,
-		'brew_photo_pos'    => '96% 78%',
+		'brew_photo'        => $cinnamon_cup,
+		'brew_bare'         => true,
 		'quote_fa'          => 'عطر اصالت، طعم ماندگار',
 		'quote_en'          => 'The aroma of authenticity, the taste that lingers.',
 		'specs'             => array(
@@ -57,7 +65,9 @@ $products = array(
 		'hero_image'        => $green_hero,
 		'description'       => 'Fresh, light and revitalizing tea crafted from carefully selected Persian tea leaves, delicately processed to preserve every note of freshness for a naturally uplifting cup.',
 		'long_description'  => 'Grown on the misty hillsides of Lahijan and harvested at their peak, our green tea leaves are gently processed to preserve their natural freshness. Each batch is hand-inspected to ensure a light, crisp cup full of character.',
-		'about_image'       => content_url( '/uploads/2026/07/e487a95b6912e10eb3b7ce4fffd37a4a3049799d.png' ),
+		'about_bg'          => content_url( '/uploads/2026/07/e487a95b6912e10eb3b7ce4fffd37a4a3049799d.png' ),
+		'card_frame_v'      => $frame_tall,
+		'card_frame_h'      => $frame_wide,
 		'features'          => array(
 			array( 'icon' => '&#127807;', 'label' => 'Fresh &amp; Light' ),
 			array( 'icon' => '&#127793;', 'label' => 'Rich in Antioxidants' ),
@@ -76,7 +86,7 @@ $products = array(
 			array( 'icon' => '&#9749;', 'title' => 'Strain &amp; Serve', 'text' => 'Enjoy warm, plain or with a touch of honey.' ),
 		),
 		'brew_photo'        => content_url( '/uploads/2026/07/befd6ced23b16f5aaa25a4ee869c09c9939eb048.png' ),
-		'brew_contain'      => true,
+		'brew_bare'         => true,
 		'quote_fa'          => 'گرمای فنجان، آرامش هر لحظه',
 		'quote_en'          => 'The warmth of every cup brings peace to every moment.',
 		'specs'             => array(
@@ -94,8 +104,10 @@ $products = array(
 		'hero_image'        => $black_bg,
 		'hero_fg_image'     => $black_cutout,
 		'description'       => 'Firouze Special Blend Black Tea offers a bold aroma, deep amber color, and a smooth finish that transforms every cup into a timeless ritual.',
-		'long_description'  => 'Our Special Blend Black Tea is inspired by the timeless heritage of Persian tea culture. Sourced from the misty hills of Lahijan and carefully processed to preserve its natural character, every leaf is selected to deliver exceptional aroma, vibrant color and a refined taste.',
-		'about_image'       => $black_bg,
+		'long_description'  => 'Our Special Blend Black Tea is inspired by centuries of Persian tea culture. Grown in the fertile hills of Lahijan and carefully processed to preserve its natural character, every leaf is selected to deliver exceptional aroma, vibrant color, and a refined taste.',
+		'about_art'         => $black_field,
+		'card_frame_v'      => $frame_tall,
+		'card_frame_h'      => $frame_wide,
 		'features'          => array(
 			array( 'icon' => '&#127811;', 'label' => '100% Persian Tea Leaves' ),
 			array( 'icon' => '&#10084;', 'label' => 'Naturally Rich in Antioxidants' ),
@@ -109,12 +121,12 @@ $products = array(
 		),
 		'brewing'           => array(
 			array( 'icon' => '&#129348;', 'title' => '1 TSP', 'text' => 'FIROUZE Black Tea Leaves.' ),
-			array( 'icon' => '&#128167;', 'title' => '200ML', 'text' => 'Boiling Water (95&ndash;100&deg;C).' ),
+			array( 'icon' => '&#128167;', 'title' => '200ML', 'text' => 'Boiling Water (90&ndash;95&deg;C).' ),
 			array( 'icon' => '&#129750;', 'title' => '3&ndash;5 MINS', 'text' => 'Steep to Perfection.' ),
 			array( 'icon' => '&#9749;', 'title' => 'Strain &amp; Enjoy', 'text' => 'Best Enjoyed Hot.' ),
 		),
 		'brew_photo'        => $black_cup,
-		'brew_contain'      => true,
+		'brew_bare'         => true,
 		'quote_fa'          => 'هر فنجان چای، قصه‌ای از آرامش',
 		'quote_en'          => 'Every cup of tea tells a story of serenity.',
 		'specs'             => array(
@@ -131,8 +143,10 @@ $products = array(
 		'tagline'           => 'Fresh &amp; Revitalizing',
 		'hero_image'        => $cardamom_hero,
 		'description'       => 'Cool, aromatic and refreshing, blended with premium Persian cardamom for a smooth, uplifting cup.',
-		'long_description'  => 'Our Cardamom Tea combines the finest Persian tea leaves with warm, aromatic cardamom pods, creating a harmonious blend that soothes the senses, refreshes the palate and uplifts the mood.',
-		'about_image'       => $cardamom_about,
+		'long_description'  => 'Our Cardamom Tea combines the finest Persian tea leaves with hand-selected cardamom pods, creating a harmonious blend that soothes the senses, refreshes the palate, and uplifts your mood.',
+		'about_bg'          => $cardamom_about,
+		'card_frame_v'      => $frame_tall,
+		'card_frame_h'      => $frame_wide,
 		'features'          => array(
 			array( 'icon' => '&#127811;', 'label' => 'Premium Cardamom' ),
 			array( 'icon' => '&#10024;', 'label' => 'Refreshing &amp; Aromatic' ),
@@ -146,11 +160,12 @@ $products = array(
 		),
 		'brewing'           => array(
 			array( 'icon' => '&#129348;', 'title' => '1 TSP', 'text' => 'FIROUZE Cardamom Tea Leaves.' ),
-			array( 'icon' => '&#128167;', 'title' => '200ML', 'text' => 'Boiling Water (90&ndash;95&deg;C).' ),
-			array( 'icon' => '&#129750;', 'title' => '3&ndash;5 MINS', 'text' => 'Steep to Perfection.' ),
+			array( 'icon' => '&#128167;', 'title' => '200ML', 'text' => 'Boiling Water (80&ndash;85&deg;C).' ),
+			array( 'icon' => '&#129750;', 'title' => '2&ndash;3 MINS', 'text' => 'Steep to Perfection.' ),
 			array( 'icon' => '&#9749;', 'title' => 'Strain &amp; Enjoy', 'text' => 'Best Enjoyed Hot.' ),
 		),
 		'brew_photo'        => $cardamom_brew,
+		'brew_bg'           => true,
 		'quote_fa'          => 'لحظه‌های ناب، با هر فنجان چای',
 		'quote_en'          => 'Pure moments begin with every cup of tea.',
 		'specs'             => array(
@@ -167,8 +182,10 @@ $products = array(
 		'tagline'           => 'Fresh &amp; Revitalizing',
 		'hero_image'        => $saffron_hero,
 		'description'       => 'Golden, fragrant and delicately infused with premium Persian saffron for a luxurious tea experience.',
-		'long_description'  => 'Our Saffron Tea is a masterpiece of nature, crafted from the finest hand-picked saffron threads. The result is a golden infusion with a delicate aroma, smooth taste and an uplifting warmth in every sip.',
-		'about_image'       => $saffron_hero,
+		'long_description'  => 'Our Saffron Tea is a masterpiece of nature, combining the finest Persian black tea leaves with handpicked saffron strands. The result is a golden infusion with a delicate aroma, smooth taste and uplifting warmth in every sip.',
+		'about_bg'          => $saffron_hero,
+		'card_frame_v'      => $frame_tall,
+		'card_frame_h'      => $frame_wide,
 		'features'          => array(
 			array( 'icon' => '&#127811;', 'label' => 'Premium Saffron' ),
 			array( 'icon' => '&#10024;', 'label' => 'Rich Aroma' ),
@@ -182,11 +199,12 @@ $products = array(
 		),
 		'brewing'           => array(
 			array( 'icon' => '&#129348;', 'title' => '1 TSP', 'text' => 'FIROUZE Saffron Tea Leaves.' ),
-			array( 'icon' => '&#128167;', 'title' => '200ML', 'text' => 'Boiling Water (90&ndash;95&deg;C).' ),
-			array( 'icon' => '&#129750;', 'title' => '3&ndash;5 MINS', 'text' => 'Steep to Perfection.' ),
-			array( 'icon' => '&#9749;', 'title' => 'Strain &amp; Enjoy', 'text' => 'Best Enjoyed Hot.' ),
+			array( 'icon' => '&#128167;', 'title' => '200ML', 'text' => 'Boiling Water (80&ndash;85&deg;C).' ),
+			array( 'icon' => '&#129750;', 'title' => '2&ndash;3 MINS', 'text' => 'Steep to Perfection.' ),
+			array( 'icon' => '&#9749;', 'title' => 'Strain &amp; Enjoy', 'text' => 'Golden, fragrant and luxurious.' ),
 		),
 		'brew_photo'        => $saffron_brew,
+		'brew_bg'           => true,
 		'quote_fa'          => 'میراثی از طعم، هدیه‌ای از طبیعت',
 		'quote_en'          => 'A heritage of flavor, a gift from nature.',
 		'specs'             => array(
@@ -213,11 +231,12 @@ get_header();
   <div class="container">
     <div class="breadcrumb">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
-      <span>/</span>
+      <span class="crumb-sep">&rsaquo;</span>
       <a href="<?php echo esc_url( home_url( '/#collection' ) ); ?>">Collection</a>
-      <span>/</span>
+      <span class="crumb-sep">&rsaquo;</span>
       <span class="current"><?php echo esc_html( $p['name'] ); ?></span>
     </div>
+    <div class="breadcrumb-rule"></div>
 
     <div class="product-hero-content">
       <p class="hero-eyebrow"><?php echo $p['tagline']; ?></p>
@@ -262,9 +281,57 @@ get_header();
 </section>
 
 <!-- About + Brewing Guide Cards -->
+<?php
+/*
+ * Optional decorative treatments, opted into per product via the data above:
+ *   card_frame_v / card_frame_h  ornate gold frame (portrait / landscape art)
+ *   about_art                    faint engraving bled into the about card
+ *   about_bg                     full-colour photo bled into the about card
+ *   brew_bare                    brewing photo as a cutout, with no frame
+ *   brew_bg                      brewing photo as a full-bleed card background,
+ *                                with the steps overlaid on its darker side
+ * A bare/background brewing photo is wide, so the grid gains --wide.
+ */
+$about_classes = 'detail-card about-card';
+$about_style   = '';
+if ( ! empty( $p['card_frame_v'] ) ) {
+	$about_classes .= ' detail-card--framed';
+	$about_style   .= '--card-frame:url(' . esc_url( $p['card_frame_v'] ) . ');';
+}
+if ( ! empty( $p['about_bg'] ) ) {
+	$about_classes .= ' about-card--photo';
+	$about_style   .= '--about-art:url(' . esc_url( $p['about_bg'] ) . ');';
+} elseif ( ! empty( $p['about_art'] ) ) {
+	$about_classes .= ' about-card--art';
+	$about_style   .= '--about-art:url(' . esc_url( $p['about_art'] ) . ');';
+}
+
+$brew_classes = 'detail-card brew-card';
+$brew_style   = '';
+if ( ! empty( $p['card_frame_h'] ) ) {
+	$brew_classes .= ' detail-card--framed';
+	$brew_style   .= '--card-frame:url(' . esc_url( $p['card_frame_h'] ) . ');';
+}
+if ( ! empty( $p['brew_bg'] ) ) {
+	$brew_classes .= ' brew-card--bg';
+	$brew_style   .= '--brew-bg:url(' . esc_url( $p['brew_photo'] ) . ');';
+}
+
+$brew_photo_classes = 'brew-photo';
+if ( ! empty( $p['brew_bare'] ) ) {
+	$brew_photo_classes .= ' brew-photo--bare';
+} elseif ( ! empty( $p['brew_contain'] ) ) {
+	$brew_photo_classes .= ' brew-photo--contain';
+}
+
+$grid_classes = 'container-wide product-detail-grid';
+if ( ! empty( $p['brew_bare'] ) || ! empty( $p['brew_bg'] ) ) {
+	$grid_classes .= ' product-detail-grid--wide';
+}
+?>
 <section class="product-detail-section">
-  <div class="container-wide product-detail-grid">
-    <div class="detail-card about-card">
+  <div class="<?php echo esc_attr( $grid_classes ); ?>">
+    <div class="<?php echo esc_attr( $about_classes ); ?>"<?php echo $about_style ? ' style="' . esc_attr( $about_style ) . '"' : ''; ?>>
       <h2>Firouze<br><?php echo esc_html( $p['name'] ); ?></h2>
       <div class="card-rule"></div>
       <p><?php echo esc_html( $p['long_description'] ); ?></p>
@@ -275,7 +342,7 @@ get_header();
       <?php endif; ?>
     </div>
 
-    <div class="detail-card brew-card">
+    <div class="<?php echo esc_attr( $brew_classes ); ?>"<?php echo $brew_style ? ' style="' . esc_attr( $brew_style ) . '"' : ''; ?>>
       <div class="brew-info">
         <h2>Brewing<br>Guide</h2>
         <div class="card-rule"></div>
@@ -291,13 +358,15 @@ get_header();
           <?php endforeach; ?>
         </div>
       </div>
-      <div class="brew-photo<?php echo ! empty( $p['brew_contain'] ) ? ' brew-photo--contain' : ''; ?>">
+      <?php if ( empty( $p['brew_bg'] ) ) : // brew_bg paints the photo as the card background, so no <img> needed ?>
+      <div class="<?php echo esc_attr( $brew_photo_classes ); ?>">
         <img
           src="<?php echo esc_url( $p['brew_photo'] ); ?>"
           alt="<?php echo esc_attr( $p['name'] ); ?>"
-          <?php if ( empty( $p['brew_contain'] ) && ! empty( $p['brew_photo_pos'] ) ) : ?>style="object-position: <?php echo esc_attr( $p['brew_photo_pos'] ); ?>;"<?php endif; ?>
+          <?php if ( empty( $p['brew_contain'] ) && empty( $p['brew_bare'] ) && ! empty( $p['brew_photo_pos'] ) ) : ?>style="object-position: <?php echo esc_attr( $p['brew_photo_pos'] ); ?>;"<?php endif; ?>
         >
       </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>

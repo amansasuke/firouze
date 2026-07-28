@@ -29,6 +29,21 @@ function mytheme_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'mytheme_styles' );
 
+/*
+ * On product pages, mirror the theme class onto <body> so the per-tea colour
+ * variables (--pp-*) cascade to shared components that live outside the
+ * .product-page wrapper (e.g. the footer), keeping each page's palette
+ * consistent top to bottom. The homepage is unaffected and keeps its own look.
+ */
+function mytheme_body_classes( $classes ) {
+	if ( is_page_template( 'template-product.php' ) && is_singular() ) {
+		$classes[] = 'is-product';
+		$classes[] = 'product-' . get_post()->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'mytheme_body_classes' );
+
 /* Default menu shown until a Primary Menu is assigned in Appearance → Menus */
 function mytheme_nav_fallback() {
   $items = array( 'Story', 'Collection', 'Heritage', 'Wholesale', 'Gallery', 'Contact' );
