@@ -3,21 +3,67 @@
  * Template Name: Product Page
  */
 
-$cinnamon_hero = content_url( '/uploads/2026/07/e16c5c54e882ab31d4748a5622994e740e2a720d.png' );
+$cinnamon_hero = content_url( '/uploads/2026/07/ChatGPT-Image-Jul-12-2026-02_47_27-PM-1-2-scaled.png' );
 $cinnamon_cup  = content_url( '/uploads/2026/07/bd5e540933c271213e1da99b277fefd6e1564c05.png' );
 $pavilion_bg   = content_url( '/uploads/2026/07/e623358bab84b181381c659d90af66bcfa58751b-1.png' );
-$green_hero    = content_url( '/uploads/2026/07/890d4ce481755cd0ea51619e32758906c67166c5-1.png' );
-$black_bg      = content_url( '/uploads/2026/07/e623358bab84b181381c659d90af66bcfa58751b-1.png' );
-$black_cutout  = content_url( '/uploads/2026/07/aced5d41ee33a165356be92f2a2d748301926377.png' );
+$green_hero    = content_url( '/uploads/2026/07/ChatGPT-Image-Jul-12-2026-02_47_27-PM-1-scaled.png' );
+$black_bg      = content_url( '/uploads/2026/07/ChatGPT-Image-Jul-12-2026-02_47_27-PM-1-1-scaled.png' );
 $black_cup     = content_url( '/uploads/2026/07/ba369650cc7b7486b5c765c848994b6436dcb67c-1.png' );
 $black_field   = content_url( '/uploads/2026/07/412cc54f1caf5550d0a852b0e777a16156a1258c.png' );
 $frame_tall    = content_url( '/uploads/2026/07/0e921a899f808ad73137d6eac8aedab5c101cfc3-1.png' );
 $frame_wide    = content_url( '/uploads/2026/07/4531f10802ccb31f0a1e700bc7d2fc189b592139-1.png' );
-$cardamom_hero = content_url( '/uploads/2026/07/cca6d5fdd8cb6011edb07f53934f23ad8d6295a7.png' );
+$cardamom_hero = content_url( '/uploads/2026/07/ChatGPT-Image-Jul-12-2026-02_47_27-PM-1-3-scaled.png' );
 $cardamom_about = content_url( '/uploads/2026/07/7db8a7ba5081f946a83473636dc6c99677e63c77.png' );
 $cardamom_brew = content_url( '/uploads/2026/07/ff0352052163ac8368e4d8c2379ff51b819b2f6c.png' );
-$saffron_hero  = content_url( '/uploads/2026/07/257b0e672947120d42ea6d2e33f37a4bc17e810b-1.png' );
+$saffron_hero  = content_url( '/uploads/2026/07/ChatGPT-Image-Jul-12-2026-02_47_27-PM-1-4-scaled.png' );
+$saffron_scene = content_url( '/uploads/2026/07/257b0e672947120d42ea6d2e33f37a4bc17e810b-1.png' );
 $saffron_brew  = content_url( '/uploads/2026/07/409ef681becb0447e1764ef2cb8eab2e349f7af9.png' );
+
+/*
+ * Illustrated icon set from the media library. The hero badges are bare gold
+ * artwork; the highlight icons already carry their own gold ring, so neither
+ * needs the CSS circle the entity fallbacks are drawn in.
+ */
+$icon = array(
+	'tea_leaves' => content_url( '/uploads/2026/07/Handpicked-Leaves.png' ),
+	'cinnamon'   => content_url( '/uploads/2026/07/Global-Distribution.png' ),
+	'smooth'     => content_url( '/uploads/2026/07/Premium-Packaging.png' ),
+	'leaf'       => content_url( '/uploads/2026/07/ri_leaf-fill.png' ),
+	'health'     => content_url( '/uploads/2026/07/solar_health-bold.png' ),
+	'pure'       => content_url( '/uploads/2026/07/icon-park-solid_pure-natural-1.png' ),
+	'tea_cup'    => content_url( '/uploads/2026/07/solar_tea-cup-bold.png' ),
+);
+
+/*
+ * Product Details icons. The six detail slots carry the same meaning on every
+ * product, so the set is indexed against the specs order rather than repeated
+ * in each product's data.
+ */
+$spec_icons = array(
+	content_url( '/uploads/2026/07/ri_leaf-fill.png' ),             // Ingredients
+	content_url( '/uploads/2026/07/boxicons_location-filled.png' ), // Origin
+	content_url( '/uploads/2026/07/ph_medal-fill.png' ),            // Grade / Weight
+	content_url( '/uploads/2026/07/ph_jar-label-fill.png' ),        // Packaging
+	content_url( '/uploads/2026/07/solar_calendar-bold.png' ),      // Shelf Life
+	content_url( '/uploads/2026/07/fa7-solid_jar-wheat.png' ),      // Storage
+);
+
+/**
+ * Print one icon badge. Products carrying `icon_img` render the artwork; the
+ * rest fall back to the HTML entity they have always used.
+ */
+$render_icon = static function ( array $item, $base_class ) {
+	if ( ! empty( $item['icon_img'] ) ) {
+		printf(
+			'<span class="%1$s %1$s--img"><img src="%2$s" alt="" loading="lazy" decoding="async"></span>',
+			esc_attr( $base_class ),
+			esc_url( $item['icon_img'] )
+		);
+		return;
+	}
+
+	printf( '<span class="%s">%s</span>', esc_attr( $base_class ), $item['icon'] );
+};
 
 $products = array(
 	'cinnamon-tea' => array(
@@ -30,15 +76,15 @@ $products = array(
 		'card_frame_v'      => $frame_tall,
 		'card_frame_h'      => $frame_wide,
 		'features'          => array(
-			array( 'icon' => '&#127811;', 'label' => '100% Persian Tea Leaves' ),
-			array( 'icon' => '&#10084;', 'label' => 'Natural Cinnamon' ),
-			array( 'icon' => '&#127793;', 'label' => 'Smooth &amp; Comforting' ),
+			array( 'icon_img' => $icon['tea_leaves'], 'label' => '100% Persian<br>Tea Leaves' ),
+			array( 'icon_img' => $icon['cinnamon'], 'label' => 'Natural<br>Cinnamon' ),
+			array( 'icon_img' => $icon['smooth'], 'label' => 'Smooth &amp;<br>Comforting' ),
 		),
 		'highlights'        => array(
-			array( 'icon' => '&#127811;', 'title' => 'Warm & Comforting', 'text' => 'Natural cinnamon creates a rich, cozy cup that&rsquo;s perfect for moments of relaxation.' ),
-			array( 'icon' => '&#10084;', 'title' => 'Pure Ingredients', 'text' => 'Made with premium Persian tea leaves and carefully selected natural cinnamon.' ),
-			array( 'icon' => '&#127793;', 'title' => 'Rich in Antioxidants', 'text' => 'A nourishing blend naturally rich in antioxidants to support everyday wellness.' ),
-			array( 'icon' => '&#9749;', 'title' => 'Perfect Anytime', 'text' => 'Ideal for any time of the day to refresh, relax and recharge your body.' ),
+			array( 'icon_img' => $icon['leaf'], 'title' => 'Warm &amp; Comforting', 'text' => 'Natural cinnamon creates a rich, cozy cup that&rsquo;s perfect for moments of relaxation.' ),
+			array( 'icon_img' => $icon['health'], 'title' => 'Pure Ingredients', 'text' => 'Made with premium Persian tea leaves and carefully selected natural cinnamon.' ),
+			array( 'icon_img' => $icon['pure'], 'title' => 'Rich in Antioxidants', 'text' => 'A nourishing blend naturally rich in antioxidants to support everyday wellness.' ),
+			array( 'icon_img' => $icon['tea_cup'], 'title' => 'Perfect Anytime', 'text' => 'Ideal for any time of the day to refresh, relax and recharge your body.' ),
 		),
 		'brewing'           => array(
 			array( 'icon' => '&#129348;', 'title' => '1 TSP', 'text' => 'FIROUZE Cinnamon Tea Leaves.' ),
@@ -69,15 +115,15 @@ $products = array(
 		'card_frame_v'      => $frame_tall,
 		'card_frame_h'      => $frame_wide,
 		'features'          => array(
-			array( 'icon' => '&#127807;', 'label' => 'Fresh &amp; Light' ),
-			array( 'icon' => '&#127793;', 'label' => 'Rich in Antioxidants' ),
-			array( 'icon' => '&#10024;', 'label' => '100% Pure &amp; Natural' ),
+			array( 'icon_img' => $icon['tea_leaves'], 'label' => 'Fresh &amp;<br>Light' ),
+			array( 'icon_img' => $icon['cinnamon'], 'label' => 'Rich in<br>Antioxidants' ),
+			array( 'icon_img' => $icon['smooth'], 'label' => '100% Pure<br>&amp; Natural' ),
 		),
 		'highlights'        => array(
-			array( 'icon' => '&#127807;', 'title' => 'Fresh &amp; Light', 'text' => 'A crisp, delicate cup that refreshes the senses at any time of day.' ),
-			array( 'icon' => '&#127793;', 'title' => 'Rich in Antioxidants', 'text' => 'Naturally rich in antioxidants to support everyday wellness.' ),
-			array( 'icon' => '&#10024;', 'title' => '100% Pure &amp; Natural', 'text' => 'Handpicked leaves with no additives, just pure Persian green tea.' ),
-			array( 'icon' => '&#9749;', 'title' => 'Perfect Anytime', 'text' => 'Ideal for any time of the day to refresh, relax and recharge your body.' ),
+			array( 'icon_img' => $icon['leaf'], 'title' => 'Fresh &amp; Light', 'text' => 'A crisp, delicate cup that refreshes the senses at any time of day.' ),
+			array( 'icon_img' => $icon['health'], 'title' => 'Rich in Antioxidants', 'text' => 'Naturally rich in antioxidants to support everyday wellness.' ),
+			array( 'icon_img' => $icon['pure'], 'title' => '100% Pure &amp; Natural', 'text' => 'Handpicked leaves with no additives, just pure Persian green tea.' ),
+			array( 'icon_img' => $icon['tea_cup'], 'title' => 'Perfect Anytime', 'text' => 'Ideal for any time of the day to refresh, relax and recharge your body.' ),
 		),
 		'brewing'           => array(
 			array( 'icon' => '&#129348;', 'title' => '1 TSP', 'text' => 'Firouze Green Tea per cup.' ),
@@ -102,22 +148,21 @@ $products = array(
 		'name'              => 'Black Tea',
 		'tagline'           => 'Royal Persian Blend',
 		'hero_image'        => $black_bg,
-		'hero_fg_image'     => $black_cutout,
 		'description'       => 'Firouze Special Blend Black Tea offers a bold aroma, deep amber color, and a smooth finish that transforms every cup into a timeless ritual.',
 		'long_description'  => 'Our Special Blend Black Tea is inspired by centuries of Persian tea culture. Grown in the fertile hills of Lahijan and carefully processed to preserve its natural character, every leaf is selected to deliver exceptional aroma, vibrant color, and a refined taste.',
 		'about_art'         => $black_field,
 		'card_frame_v'      => $frame_tall,
 		'card_frame_h'      => $frame_wide,
 		'features'          => array(
-			array( 'icon' => '&#127811;', 'label' => '100% Persian Tea Leaves' ),
-			array( 'icon' => '&#10084;', 'label' => 'Naturally Rich in Antioxidants' ),
-			array( 'icon' => '&#9749;', 'label' => 'Bold &amp; Rich' ),
+			array( 'icon_img' => $icon['tea_leaves'], 'label' => '100% Persian<br>Tea Leaves' ),
+			array( 'icon_img' => $icon['cinnamon'], 'label' => 'Naturally Rich<br>in Antioxidants' ),
+			array( 'icon_img' => $icon['smooth'], 'label' => 'Bold &amp;<br>Full-Bodied' ),
 		),
 		'highlights'        => array(
-			array( 'icon' => '&#9749;', 'title' => 'Bold &amp; Rich', 'text' => 'A deep, full-bodied cup with the bold character of premium Persian black tea.' ),
-			array( 'icon' => '&#127811;', 'title' => 'Aromatic', 'text' => 'Fragrant leaves that fill every cup with a rich, inviting aroma.' ),
-			array( 'icon' => '&#10084;', 'title' => 'Rich in Antioxidants', 'text' => 'Naturally rich in antioxidants to support everyday wellness.' ),
-			array( 'icon' => '&#9749;', 'title' => 'Perfect Anytime', 'text' => 'Ideal for any time of the day to refresh, relax and recharge your body.' ),
+			array( 'icon_img' => $icon['leaf'], 'title' => 'Bold &amp; Rich', 'text' => 'A deep, full-bodied tea with remarkable character and a satisfying finish.' ),
+			array( 'icon_img' => $icon['health'], 'title' => 'Aromatic', 'text' => 'Delicate floral notes balanced with rich roasted aromas in every brew.' ),
+			array( 'icon_img' => $icon['pure'], 'title' => 'Rich in Antioxidants', 'text' => 'Naturally abundant in antioxidants for a wholesome daily cup.' ),
+			array( 'icon_img' => $icon['tea_cup'], 'title' => 'Perfect Anytime', 'text' => 'Enjoy hot during quiet mornings or iced on warm afternoons.' ),
 		),
 		'brewing'           => array(
 			array( 'icon' => '&#129348;', 'title' => '1 TSP', 'text' => 'FIROUZE Black Tea Leaves.' ),
@@ -148,15 +193,15 @@ $products = array(
 		'card_frame_v'      => $frame_tall,
 		'card_frame_h'      => $frame_wide,
 		'features'          => array(
-			array( 'icon' => '&#127811;', 'label' => 'Premium Cardamom' ),
-			array( 'icon' => '&#10024;', 'label' => 'Refreshing &amp; Aromatic' ),
-			array( 'icon' => '&#9749;', 'label' => 'Smooth &amp; Calming Cup' ),
+			array( 'icon_img' => $icon['tea_leaves'], 'label' => 'Premium<br>Cardamom' ),
+			array( 'icon_img' => $icon['cinnamon'], 'label' => 'Refreshing &amp;<br>Aromatic' ),
+			array( 'icon_img' => $icon['smooth'], 'label' => 'Smooth &amp;<br>Calming Cup' ),
 		),
 		'highlights'        => array(
-			array( 'icon' => '&#10024;', 'title' => 'Cool &amp; Refreshing', 'text' => 'Cardamom brings a naturally cooling, refreshing lift to every cup.' ),
-			array( 'icon' => '&#127811;', 'title' => 'Natural Goodness', 'text' => 'Made with premium Persian tea leaves and carefully selected cardamom pods.' ),
-			array( 'icon' => '&#10084;', 'title' => 'Aromatic &amp; Pure', 'text' => 'A fragrant blend with no additives, just pure Persian cardamom tea.' ),
-			array( 'icon' => '&#9749;', 'title' => 'Perfect Anytime', 'text' => 'Ideal for any time of the day to refresh, relax and recharge your body.' ),
+			array( 'icon_img' => $icon['leaf'], 'title' => 'Cool &amp; Refreshing', 'text' => 'Cardamom brings a naturally cooling, refreshing lift to every cup.' ),
+			array( 'icon_img' => $icon['health'], 'title' => 'Natural Goodness', 'text' => 'Made with premium Persian tea leaves and carefully selected cardamom pods.' ),
+			array( 'icon_img' => $icon['pure'], 'title' => 'Aromatic &amp; Pure', 'text' => 'A fragrant blend with no additives, just pure Persian cardamom tea.' ),
+			array( 'icon_img' => $icon['tea_cup'], 'title' => 'Perfect Anytime', 'text' => 'Ideal for any time of the day to refresh, relax and recharge your body.' ),
 		),
 		'brewing'           => array(
 			array( 'icon' => '&#129348;', 'title' => '1 TSP', 'text' => 'FIROUZE Cardamom Tea Leaves.' ),
@@ -183,19 +228,19 @@ $products = array(
 		'hero_image'        => $saffron_hero,
 		'description'       => 'Golden, fragrant and delicately infused with premium Persian saffron for a luxurious tea experience.',
 		'long_description'  => 'Our Saffron Tea is a masterpiece of nature, combining the finest Persian black tea leaves with handpicked saffron strands. The result is a golden infusion with a delicate aroma, smooth taste and uplifting warmth in every sip.',
-		'about_bg'          => $saffron_hero,
+		'about_bg'          => $saffron_scene,
 		'card_frame_v'      => $frame_tall,
 		'card_frame_h'      => $frame_wide,
 		'features'          => array(
-			array( 'icon' => '&#127811;', 'label' => 'Premium Saffron' ),
-			array( 'icon' => '&#10024;', 'label' => 'Rich Aroma' ),
-			array( 'icon' => '&#9749;', 'label' => 'Luxurious' ),
+			array( 'icon_img' => $icon['tea_leaves'], 'label' => 'Premium<br>Saffron' ),
+			array( 'icon_img' => $icon['cinnamon'], 'label' => 'Rich<br>Aroma' ),
+			array( 'icon_img' => $icon['smooth'], 'label' => 'Luxurious' ),
 		),
 		'highlights'        => array(
-			array( 'icon' => '&#127811;', 'title' => 'Premium Saffron', 'text' => 'Handpicked saffron threads sourced for their exceptional color and purity.' ),
-			array( 'icon' => '&#10024;', 'title' => 'Rich Aroma', 'text' => 'A naturally fragrant infusion that fills every cup with warmth.' ),
-			array( 'icon' => '&#10084;', 'title' => 'Golden Infusion', 'text' => 'Steeps into a radiant golden hue with a smooth, delicate character.' ),
-			array( 'icon' => '&#9749;', 'title' => 'Luxurious', 'text' => 'Perfect for the special moments that deserve a refined, elegant cup.' ),
+			array( 'icon_img' => $icon['leaf'], 'title' => 'Premium Saffron', 'text' => 'Handpicked saffron threads sourced for their exceptional color and purity.' ),
+			array( 'icon_img' => $icon['health'], 'title' => 'Rich Aroma', 'text' => 'A naturally fragrant infusion that fills every cup with warmth.' ),
+			array( 'icon_img' => $icon['pure'], 'title' => 'Golden Infusion', 'text' => 'Steeps into a radiant golden hue with a smooth, delicate character.' ),
+			array( 'icon_img' => $icon['tea_cup'], 'title' => 'Luxurious', 'text' => 'Perfect for the special moments that deserve a refined, elegant cup.' ),
 		),
 		'brewing'           => array(
 			array( 'icon' => '&#129348;', 'title' => '1 TSP', 'text' => 'FIROUZE Saffron Tea Leaves.' ),
@@ -248,7 +293,7 @@ get_header();
         <?php foreach ( $p['features'] as $i => $f ) : ?>
           <?php if ( $i > 0 ) : ?><span class="feature-sep">&#10022;</span><?php endif; ?>
           <div class="product-feature">
-            <span class="feature-icon-circle"><?php echo $f['icon']; ?></span>
+            <?php $render_icon( $f, 'feature-icon-circle' ); ?>
             <p><?php echo $f['label']; ?></p>
           </div>
         <?php endforeach; ?>
@@ -271,7 +316,7 @@ get_header();
     <div class="highlights-panel">
       <?php foreach ( $p['highlights'] as $h ) : ?>
         <div class="highlight-item">
-          <span class="highlight-icon"><?php echo $h['icon']; ?></span>
+          <?php $render_icon( $h, 'highlight-icon' ); ?>
           <h4><?php echo $h['title']; ?></h4>
           <p><?php echo $h['text']; ?></p>
         </div>
@@ -382,12 +427,13 @@ if ( ! empty( $p['brew_bare'] ) || ! empty( $p['brew_bg'] ) ) {
 <!-- Product Details -->
 <section class="product-specs-section">
   <div class="container-wide">
-    <h2 class="specs-title">Product Details</h2>
     <div class="specs-panel">
+      <h2 class="specs-title">Product Details</h2>
       <div class="product-specs-grid">
-        <?php foreach ( $p['specs'] as $spec ) : ?>
+        <?php foreach ( $p['specs'] as $i => $spec ) : ?>
+          <?php $spec['icon_img'] = isset( $spec_icons[ $i ] ) ? $spec_icons[ $i ] : ''; ?>
           <div class="spec-item">
-            <span class="spec-icon"><?php echo $spec['icon']; ?></span>
+            <?php $render_icon( $spec, 'spec-icon' ); ?>
             <p class="spec-label"><?php echo esc_html( $spec['label'] ); ?></p>
             <p class="spec-value"><?php echo $spec['value']; ?></p>
           </div>
