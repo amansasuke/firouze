@@ -48,6 +48,16 @@ $spec_icons = array(
 	content_url( '/uploads/2026/07/fa7-solid_jar-wheat.png' ),      // Storage
 );
 
+/*
+ * Brewing Guide icons, indexed the same way: dose, water, steep, serve.
+ */
+$brew_icons = array(
+	content_url( '/uploads/2026/07/icon-park-solid_pure-natural.png' ),      // 1 TSP
+	content_url( '/uploads/2026/07/streamline-ultimate_tea-pot-bold.png' ),  // 200ML
+	content_url( '/uploads/2026/07/icon-park-solid_time.png' ),              // 3-5 MINS
+	content_url( '/uploads/2026/07/solar_tea-cup-bold.png' ),                // Strain & Enjoy
+);
+
 /**
  * Print one icon badge. Products carrying `icon_img` render the artwork; the
  * rest fall back to the HTML entity they have always used.
@@ -392,9 +402,10 @@ if ( ! empty( $p['brew_bare'] ) || ! empty( $p['brew_bg'] ) ) {
         <h2>Brewing<br>Guide</h2>
         <div class="card-rule"></div>
         <div class="brewing-steps">
-          <?php foreach ( $p['brewing'] as $step ) : ?>
+          <?php foreach ( $p['brewing'] as $i => $step ) : ?>
+            <?php $step['icon_img'] = isset( $brew_icons[ $i ] ) ? $brew_icons[ $i ] : ''; ?>
             <div class="brewing-step">
-              <span class="step-icon"><?php echo $step['icon']; ?></span>
+              <?php $render_icon( $step, 'step-icon' ); ?>
               <div>
                 <h4><?php echo $step['title']; ?></h4>
                 <p><?php echo $step['text']; ?></p>

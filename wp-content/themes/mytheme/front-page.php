@@ -200,4 +200,11 @@
   </div>
 </section>
 
+<!-- Partner with Us / scan Section -->
+<section class="scan-section" id="scan">
+  <div class="container-fluid">
+    <img class="scan-image" src="<?php echo esc_url( content_url( '/uploads/2026/08/18bed732a5617b161004cd2fe748087172c502c1.png' ) ); ?>" alt="Cafes">
+  </div>
+</section>
+
 <?php get_footer(); ?>
